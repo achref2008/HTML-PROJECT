@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ashraf Projet HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #007bff;
+      padding: 10px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    nav button {
+      background: white;
+      color: #007bff;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #0056b3;
+      color: white;
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
+    }
+
+    #formulaire {
+      display: block;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-left: 5px solid #007bff;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #222;
+      color: white;
+      font-size: 16px;
+      margin-top: 40px;
+      border-top: 4px solid #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button onclick="showSection('formulaire')">📋 عرض النموذج</button>
+    <button onclick="showSection('code')">💻 الكود الكامل</button>
+    <button onclick="showSection('explication')">📘 شرح مفصل</button>
+  </nav>
+
+  <!-- 1. النموذج بدون CSS -->
+  <section id="formulaire" class="section">
+    <h1>Mon Premier formulaire HTML5</h1>
+    <form method="post" action="#">
+      <fieldset>
+        <legend>Vos coordonnées</legend>
+        Prénom: <input type="text" name="prenom"><br>
+        Nom: <input type="text" name="nom"><br>
+        Date de naissance: <input type="date" name="naissance"><br>
+        Email: <input type="email" name="email"><br>
+        Mot de passe: <input type="password" name="password"><br>
+        Sexe:
+        <input type="radio" name="sexe" value="Homme" checked> Homme
+        <input type="radio" name="sexe" value="Femme"> Femme<br>
+        Pays:
+        <select name="pays">
+          <option selected disabled>--Choisissez votre pays--</option>
+          <option value="France">France</option>
+          <option value="Allemagne">Allemagne</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Vos goûts</legend>
+        <input type="checkbox" name="gout1" value="Pommes"> Pommes<br>
+        <input type="checkbox" name="gout2" value="Poires"> Poires<br>
+        <input type="checkbox" name="gout3" value="Scoubidous"> Scoubidous<br>
+        <textarea name="commentaire" rows="4" cols="50" placeholder="Décrivez vos goûts..."></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Envoyez votre photo</legend>
+        <input type="file" name="photo"> <br><br>
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Effacer">
+      </fieldset>
+    </form>
+  </section>
+
+  <!-- 2. الكود الكامل -->
+  <section id="code" class="section">
+    <h2>💻 Code Complet:</h2>
+    <pre>
+&lt;h1&gt;Mon Premier formulaire HTML5&lt;/h1&gt;
+&lt;form method="post" action="#"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Vos coordonnées&lt;/legend&gt;
+    Prénom: &lt;input type="text" name="prenom"&gt;&lt;br&gt;
+    Nom: &lt;input type="text" name="nom"&gt;&lt;br&gt;
+    Date de naissance: &lt;input type="date" name="naissance"&gt;&lt;br&gt;
+    Email: &lt;input type="email" name="email"&gt;&lt;br&gt;
+    Mot de passe: &lt;input type="password" name="password"&gt;&lt;br&gt;
+    Sexe:
+    &lt;input type="radio" name="sexe" value="Homme" checked&gt; Homme
+    &lt;input type="radio" name="sexe" value="Femme"&gt; Femme&lt;br&gt;
+    Pays:
+    &lt;select name="pays"&gt;
+      &lt;option selected disabled&gt;--Choisissez votre pays--&lt;/option&gt;
+      &lt;option value="France"&gt;France&lt;/option&gt;
+      &lt;option value="Allemagne"&gt;Allemagne&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Vos goûts&lt;/legend&gt;
+    &lt;input type="checkbox" name="gout1" value="Pommes"&gt; Pommes&lt;br&gt;
+    &lt;input type="checkbox" name="gout2" value="Poires"&gt; Poires&lt;br&gt;
+    &lt;input type="checkbox" name="gout3" value="Scoubidous"&gt; Scoubidous&lt;br&gt;
+    &lt;textarea name="commentaire" rows="4" cols="50"&gt;&lt;/textarea&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Envoyez votre photo&lt;/legend&gt;
+    &lt;input type="file" name="photo"&gt; &lt;br&gt; &lt;br&gt;
+    &lt;input type="submit" value="Envoyer"&gt;
+    &lt;input type="reset" value="Effacer"&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+    </pre>
+  </section>
+
+  <!-- 3. شرح مفصل -->
+  <section id="explication" class="section">
+    <h2>📘 شرح تفصيلي بالعربية لكل عنصر:</h2>
+
+    <ul>
+      <li><strong>&lt;form&gt;</strong>: يحتوي على كل عناصر النموذج لإرسال البيانات.</li>
+      <li><strong>method="post"</strong>: يرسل البيانات بطريقة آمنة لا تظهر في الرابط.</li>
+      <li><strong>action="#"</strong>: الرابط الهدف لإرسال البيانات (رمزي هنا).</li>
+      <li><strong>&lt;fieldset&gt;</strong>: يضع مجموعة إدخالات داخل إطار مرئي.</li>
+      <li><strong>&lt;legend&gt;</strong>: عنوان يظهر في إطار <code>fieldset</code>.</li>
+      <li><strong>&lt;input type="text"&gt;</strong>: حقل نصي مثل الاسم أو اللقب.</li>
+      <li><strong>&lt;input type="date"&gt;</strong>: إدخال لتحديد التاريخ من تقويم.</li>
+      <li><strong>&lt;input type="email"&gt;</strong>: يتحقق من تنسيق البريد الإلكتروني.</li>
+      <li><strong>&lt;input type="password"&gt;</strong>: لإدخال كلمات السر بطريقة مخفية.</li>
+      <li><strong>&lt;input type="radio"&gt;</strong>: للاختيار بين خيارات حصرية (واحد فقط).</li>
+      <li><strong>&lt;input type="checkbox"&gt;</strong>: لتحديد خيارات متعددة.</li>
+      <li><strong>&lt;select&gt; و &lt;option&gt;</strong>: لإنشاء قائمة منسدلة.</li>
+      <li><strong>&lt;textarea&gt;</strong>: مربع كبير لإدخال ملاحظات أو تعليقات.</li>
+      <li><strong>&lt;input type="file"&gt;</strong>: لاختيار وتحميل ملف من الجهاز.</li>
+      <li><strong>&lt;input type="submit"&gt;</strong>: لإرسال البيانات.</li>
+      <li><strong>&lt;input type="reset"&gt;</strong>: لإعادة تعيين النموذج.</li>
+    </ul>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <p>🧠 Coded by <strong>Ashraf Marzouki</strong> © 2025</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
